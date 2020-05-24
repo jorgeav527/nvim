@@ -9,14 +9,11 @@
     ],
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
-    "snippets.ultisnips.directories": [
-        "UltiSnips",
-        "~/.config/nvim/utils/snips"
-    ],
+    "python.jediPath": "/home/jorgeav527/anaconda3/lib/python3.7/site-packages",
     "explorer.width": 30,
     "explorer.icon.enableNerdfont": true,
     "explorer.previewAction.onHover": false,
-    "explorer.icon.enableVimDevicons": false,
+    "explorer.icon.enableVimDevicons": true,
     "explorer.keyMappings": {
         "<cr>": [
             "expandable?",

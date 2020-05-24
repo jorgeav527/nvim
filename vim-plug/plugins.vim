@@ -12,14 +12,24 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sheerun/vim-polyglot'
     " Auto pairs for '(' '[' '{' 
     Plug 'jiangmiao/auto-pairs'
+    " Auto close tags <>
+    Plug 'alvan/vim-closetag'
     " Theme
     Plug 'arcticicestudio/nord-vim'
     " Air theme
     Plug 'vim-airline/vim-airline'
+    " Cool Icons
+    Plug 'ryanoasis/vim-devicons'
     " Stable version of coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Complements
     Plug 'tpope/vim-commentary'
+    " Repeat stuff
+    Plug 'tpope/vim-repeat'
+    " Surround
+    Plug 'tpope/vim-surround'
+    " Fast within-file word replacement.
+    Plug 'wincent/scalpel'
     " FZF and rooter
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
@@ -30,5 +40,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhinz/vim-signify'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
+    " Vim whichkeys
+    Plug 'liuchengxu/vim-which-key'
+    " Distraction free writing by removing UI elements and centering everything.
+    Plug 'junegunn/goyo.vim'
+    " For nice & tabular tables. (works in md too)
+    Plug 'godlygeek/tabular'
+    " VimWiki
+    Plug 'vimwiki/vimwiki'
 
 call plug#end()

@@ -1,33 +1,24 @@
-source $HOME/.config/nvim/vim-plug/plugins.vim
-source $HOME/.config/nvim/general/settings.vim
-" source $HOME/.config/nvim/general/paths.vim
-source $HOME/.config/nvim/keys/mappings.vim
-source $HOME/.config/nvim/themes/nordvim.vim
-source $HOME/.config/nvim/themes/airline.vim
-source $HOME/.config/nvim/plug-config/coc.vim
-source $HOME/.config/nvim/plug-config/fzf.vim
-source $HOME/.config/nvim/plug-config/signify.vim
-
-
 "" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" NeoVim by jorgeav527 init.vimrc
 "" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" => Plugging Setup
-"" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"call plug#begin('~/.vim/plugged')
+source $HOME/.config/nvim/vim-plug/plugins.vim
+source $HOME/.config/nvim/general/settings.vim
+source $HOME/.config/nvim/keys/mappings.vim
+source $HOME/.config/nvim/keys/which-keys.vim
+source $HOME/.config/nvim/themes/nordvim.vim
+source $HOME/.config/nvim/themes/airline.vim
+" source $HOME/.config/nvim/general/paths.vim
+source $HOME/.config/nvim/plug-config/coc.vim
+source $HOME/.config/nvim/plug-config/fzf.vim
+source $HOME/.config/nvim/plug-config/signify.vim
 
-"" General
-"" """""""
 "    " For automatically restore one file's cursor position and folding.
-"    Plug 'vim-scripts/restore_view.vim'
 "    " Status tabline for vim.
 "    Plug 'bling/vim-airline'
 "    " Gruvbox themes.
 "    Plug 'morhetz/gruvbox'
 "    " Integrate fzf with Vim.
-"    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 "    Plug 'junegunn/fzf.vim'
 "    " For show the #color in a css file
 "    Plug 'ap/vim-css-color'

@@ -7,7 +7,6 @@ install jedi globally -pip3 install jedi
 use pip3 to find jedi path pip3 show jedi
 go to your coc-settings.json add the path shown by pip3 (exactly that path) and use it as the value of python.jediPath
 
-Download the snippets file snippetsMate && config snippets.userSnippetsDirectory 
 > install python and the extension for nvim
 pip3 install neovim pynvim
 > To install fzf

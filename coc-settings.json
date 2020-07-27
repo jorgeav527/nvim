@@ -5,6 +5,7 @@
         "javascript",
         "html",
         "json",
+        "vim",
         "python"
     ],
     "python.linting.enabled": true,

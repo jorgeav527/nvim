@@ -1,12 +1,14 @@
 syntax enable                           " Enables syntax highlighing
+set termguicolors                       " Use guifg/guibg instead of ctermfg/ctermbg in terminal
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed 
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
-set ruler                    			" Show the cursor position all the time
-set cmdheight=2                         " More space for displaying messages
-set iskeyword+=-                      	" treat dash separated words as a word text object"
+set ruler                               " Show the cursor position all the time
+set cmdheight=3                         " More space for displaying messages
+set iskeyword+=-                        " treat dash separated words as a word text object
+set iskeyword+=_                        " treat under_dash separated words as a word text object
 set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
@@ -29,12 +31,14 @@ set scrolloff=3                         " Set 3 lines to scrolloff
 set matchpairs+=<:>                     " Use % to jump between pairs for HTML <:>.
 set cursorline                          " Enable highlighting of the current line
 set background=dark                     " tell vim what the background color looks like
+set list                                " Show whitespace
 set colorcolumn=80                      " Show in the screem where is 80 characteres
 set showtabline=2                       " Always show tabs 
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set nobackup                            " This is recommended by coc
+set noswapfile                          " Don't create root-owned files
 set nowritebackup                       " This is recommended by coc
-set updatetime=300                      " Faster completion
+set updatetime=100                      " Faster completion
 set timeoutlen=1000                     " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
@@ -42,6 +46,9 @@ set foldmethod=indent                   " Foldmethod indent
 set foldlevelstart=1                    " Fold indent start at one  
 set foldlevel=99                        " End fold indent at 99
 set autochdir                           " Your working directory will always be the same as your working directory
+set shortmess+=c                        " Don't pass messages to ins-completion-menu (coc)
+set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time (coc)
+set nocompatible                        " for wiki
 
 autocmd BufRead,BufNewFile *.json,*.css,*.scss,*.less setlocal foldmethod=marker foldmarker={,}
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC

@@ -13,15 +13,15 @@ nnoremap <M-k>    :resize +2<CR>
 nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
 
-" Easy CAPS
-inoremap <c-u> <ESC>viwUi
-nnoremap <c-u> viwU<Esc>
+" TAB in general mode will move to text buffer
+nnoremap <silent> <C-Right> :bnext<CR>
+" SHIFT-TAB will go back
+nnoremap <silent> <C-Left> :bprevious<CR>
 
-" Ctrl + Page Up Working in Ubuntu
-nnoremap <C-PageUp> :bnext<CR>
-" Ctrl + Page Down Working in Ubuntu
-nnoremap <C-PageDown> :bprevious<CR>
-
+" Alternate way to save
+nnoremap <silent> <C-w> :w<CR>
+" Alternate way to quit
+nnoremap <silent> <C-q> :wq!<CR>
 " <TAB>: completion.
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
@@ -40,6 +40,5 @@ nnoremap <A-Down> :m .+1<CR>==
 nnoremap <A-Up> :m .-2<CR>==
 inoremap <A-Down> <Esc>:m .+1<CR>==gi
 inoremap <A-Up> <Esc>:m .-2<CR>==gi
-vnoremap <A-Down> :m '>+1<CR>gv=gv
-vnoremap <A-Up> :m '<-2<CR>gv=gv
-
+vnoremap <A-Down> :m '>+1<CR>gv-gv
+vnoremap <A-Up> :m '<-2<CR>gv-gv

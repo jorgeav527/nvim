@@ -1,15 +1,3 @@
-" Global extensions
-let g:coc_global_extensions = [
-    \ 'coc-snippets',
-    \ 'coc-html',
-    \ 'coc-css',
-    \ 'coc-python',
-    \ 'coc-explorer',
-    \ 'coc-json',
-    \ 'coc-vimlsp',
-    \ 'coc-marketplace',
-    \ ]
-
 " Map <tab> for trigger completion, completion confirm, snippet expand and jump like VSCode
 inoremap <silent><expr> <TAB>
     \ pumvisible() ? coc#_select_confirm() :
@@ -43,8 +31,10 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
   else
-    call CocAction('doHover')
+    execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
 
@@ -71,3 +61,17 @@ command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport
 
 nmap <space>e :CocCommand explorer<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
+" Snippets
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'

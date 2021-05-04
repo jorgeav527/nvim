@@ -12,7 +12,7 @@ let g:coc_global_extensions = [
     \ 'coc-vimlsp',
     \ 'coc-explorer',
     \ 'coc-json',
-    \ 'coc-markdownlint',
     \ 'coc-marketplace',
+    \ 'coc-markdownlint'
     \ ]
 

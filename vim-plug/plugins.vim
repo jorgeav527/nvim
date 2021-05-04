@@ -22,8 +22,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'airblade/vim-rooter'
-    " For show the #color in a css file
-    Plug 'ap/vim-css-color'
+    " For color
+    Plug 'norcalli/nvim-colorizer.lua'
     " For git integration
     Plug 'mhinz/vim-signify'
     Plug 'tpope/vim-fugitive'
@@ -40,8 +40,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/goyo.vim'
     " Snippets
     Plug 'honza/vim-snippets'
-    " For nice & tabular tables. (works in md too)
-    Plug 'godlygeek/tabular'
     " For indent
     Plug 'yggdroot/indentline'
     " Auto close tags <>

@@ -59,6 +59,7 @@ endif
 
 " AutoCommands
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o " Stop newline continution of comments
+" autocmd FileType markdown set conceallevel=0 " Don't conceal characters like *
 autocmd BufNewFile,BufRead *.md setlocal spell " Spelling
 
 " You can't stop me

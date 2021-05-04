@@ -17,3 +17,4 @@ source $HOME/.config/nvim/plug-config/signify.vim
 source $HOME/.config/nvim/plug-config/start-project.vim
 source $HOME/.config/nvim/plug-config/tagalong.vim
 source $HOME/.config/nvim/plug-config/vimwiki.vim
+luafile $HOME/.config/nvim/lua/plug-colorizer.lua

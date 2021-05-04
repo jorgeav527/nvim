@@ -61,7 +61,8 @@
         "vim": ["vim"],
         "snippets": ["snippets"],
         "typescript": ["javascript", "angulartypescript"],
-        "html": ["htmldjango"]
+        "html": ["htmldjango"],
+        "vimwiki": ["markdown"]
     },
     // Python
     "python.jediEnabled": false,
